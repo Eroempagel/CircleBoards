@@ -1,12 +1,12 @@
 import React from "react";
 import Menu from "../components/menu/Menu";
-import Messages from "../components/messages/Messages"
+import Messages from "../components/messages/Messages";
 import { userIsAuthenticated } from "../redux/HOCs";
+// import Like from "../components/like/Like";
 
 class Profile extends React.Component {
-  
   render() {
-    console.log(this.props)
+    console.log(this.props);
     return (
       <div className="Profile">
         <Menu isAuthenticated={this.props.isAuthenticated} />
