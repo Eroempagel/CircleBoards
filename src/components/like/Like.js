@@ -24,23 +24,14 @@ class Like extends React.Component {
     }));
   };
 
-  // handleDislikes = (event) => {
-  //     let totalDislikes = this.setState.Dislikes;
-  // }
-  // handleChange = (event) => {
-  //     let data = {...this.state};
-
-  //     data[event.target.name] = event.target.value;
-
-  //     this.setState(data);
-  //   }
-
   render() {
     return (
       <div>
-        <p> Like this Message</p>;
-        <button onClick={this.handleLikes}> Likes </button>;
-        <button onClick={this.handleDislikes}> Dislikes </button>;
+        <p> Like this Message</p>
+        <button onClick={this.handleLikes}> Likes </button>
+        <span>{this.state.Likes}</span>
+        <button onClick={this.handleDislikes}> Dislikes </button>
+        <span>{this.state.Dislikes}</span>
       </div>
     );
   }
