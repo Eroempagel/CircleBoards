@@ -53,11 +53,15 @@ button {
   background: #e339d8aa;
   padding: 4px;
   border: 1px solid rgba(0, 0, 0, 0.5);
-  color: white;
+  color: yellow;
   font-size: 1rem;
   width: 26%;
   margin-top: 2px;
   border-radius: 15px;
+}
+
+.SendMessage {
+  width: 40%;
 }
 
 .Welcome {
