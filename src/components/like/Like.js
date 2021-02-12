@@ -29,7 +29,6 @@ class Like extends React.Component {
   render() {
     return (
       <div>
-        <p> Like this Message</p>
         <button onClick={this.handleLikes}> Likes </button>
         <span>{this.state.Likes}</span>
         <button onClick={this.handleDislikes}> Dislikes </button>
