@@ -29,9 +29,13 @@ class Like extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.handleLikes}> Likes </button>
+        <button onClick={this.handleLikes}>
+          <strong>Likes</strong>
+        </button>
         <span>{this.state.Likes}</span>
-        <button onClick={this.handleDislikes}> Dislikes </button>
+        <button onClick={this.handleDislikes}>
+          <strong>Dislikes</strong>
+        </button>
         <span>{this.state.Dislikes}</span>
       </div>
     );

@@ -2,6 +2,7 @@ import React from "react";
 import { withAsyncAction } from "../../redux/HOCs";
 import Like from "../like/Like";
 import Follow from "../follow/Follow";
+import Clock from "../clock/Clock";
 
 class Messages extends React.Component {
   constructor(props) {
@@ -61,17 +62,22 @@ class Messages extends React.Component {
     }
 
     return (
-      <div className="Messages">
-        <div className="ListMessage">{display}</div>
+      <div>
+        <Clock />
+        <div className="Messages">
+          <div className="ListMessage">{display}</div>
 
-        <div className="NewMessage">
-          <input
-            name="message"
-            onChange={this.handleChange}
-            value={this.state.message}
-          />
-          <button onClick={this.newMessageHandler}> Send Message </button>
-          <Follow />
+          <div className="NewMessage">
+            <input
+              name="message"
+              onChange={this.handleChange}
+              value={this.state.message}
+            />
+            <button className="SendMessage" onClick={this.newMessageHandler}>
+              <strong>Send Message</strong>
+            </button>
+            <Follow />
+          </div>
         </div>
       </div>
     );
