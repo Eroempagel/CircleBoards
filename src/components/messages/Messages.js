@@ -51,14 +51,19 @@ class Messages extends React.Component {
     let display = <div>No Messages Found</div>;
     if (this.state.messages) {
       display = this.state.messages.map((value) => {
-        return <li key={value.id}>{value.text}</li>;
+        return (
+          <li key={value.id}>
+            {value.text}
+            <Like />
+          </li>
+        );
       });
     }
 
     return (
       <div className="Messages">
         <div className="ListMessage">{display}</div>
-        <Like />
+
         <div className="NewMessage">
           <input
             name="message"
