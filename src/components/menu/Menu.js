@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Menu.css";
 import { withAsyncAction } from "../../redux/HOCs";
-
+import logoSrc from "../../Assets/Images/logo.png";
 class Menu extends React.Component {
-  handleLogout = event => {
+  handleLogout = (event) => {
     event.preventDefault();
     this.props.logout();
   };
@@ -12,11 +12,15 @@ class Menu extends React.Component {
   render() {
     return (
       <div className="Menu">
-        <h1>Kwitter</h1>
+        <span>
+          <img height="50px" src={logoSrc} alt="circleBoardLogo" />
+        </span>
+        <h1>CircleBoards</h1>
+
         {this.props.isAuthenticated && (
           <div id="menu-links">
             <Link to="/" onClick={this.handleLogout}>
-              Logout
+              <strong> Logout</strong>
             </Link>
           </div>
         )}
