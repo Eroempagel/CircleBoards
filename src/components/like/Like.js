@@ -13,15 +13,17 @@ class Like extends React.Component {
   }
 
   handleLikes = (event) => {
-    this.setState((state, props) => ({
-      Likes: (state.Likes += 1),
-    }));
+    if (this.state.Likes < 1)
+      this.setState((state, props) => ({
+        Likes: (state.Likes += 1),
+      }));
   };
 
   handleDislikes = (event) => {
-    this.setState((state, props) => ({
-      Dislikes: (state.Dislikes += 1),
-    }));
+    if (this.state.Dislikes < 1)
+      this.setState((state, props) => ({
+        Dislikes: (state.Dislikes += 1),
+      }));
   };
 
   render() {
