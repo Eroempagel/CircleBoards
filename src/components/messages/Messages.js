@@ -1,6 +1,7 @@
 import React from "react";
 import { withAsyncAction } from "../../redux/HOCs";
 import Like from "../like/Like";
+import Follow from "../follow/Follow";
 
 class Messages extends React.Component {
   constructor(props) {
@@ -65,6 +66,7 @@ class Messages extends React.Component {
             value={this.state.message}
           />
           <button onClick={this.newMessageHandler}> Send Message </button>
+          <Follow />
         </div>
       </div>
     );
