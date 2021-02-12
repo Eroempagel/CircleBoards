@@ -20,7 +20,7 @@ class Follow extends React.Component {
   render() {
     return (
       <div>
-        <button>Follow</button>;
+        <button>Follow</button>
       </div>
     );
   }

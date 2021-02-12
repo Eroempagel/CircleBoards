@@ -52,7 +52,7 @@ class Messages extends React.Component {
     if (this.state.messages) {
       display = this.state.messages.map((value) => {
         return (
-          <li key={value.id}>
+          <li className="UserMessages" key={value.id}>
             {value.text}
             <Like />
           </li>
